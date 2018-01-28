@@ -390,7 +390,7 @@ var pan_115 = function(cookies) {
                 if (file_list.length > 0) {
                     var length = file_list.length;
                     for (var i = 0; i < length; i++) {
-                        files.push("wget  --load-cookies=cookies.txt  -O  " + JSON.stringify(file_list[i].name)  +" "   + JSON.stringify(file_list[i].link) + "\n");
+                        files.push("wget -O  " + JSON.stringify(file_list[i].name)  +" " +"--load-cookies=cookies.txt  "  + JSON.stringify(file_list[i].link) + "\n");
                         aria2c_txt.push([
                             file_list[i].link,
                             combination.header("aria2c_txt"),
